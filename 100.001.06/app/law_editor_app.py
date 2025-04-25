@@ -1,6 +1,9 @@
 import streamlit as st
 
 st.set_page_config(layout="wide")  # ✅ 무조건 가장 먼저!
+import sys
+import os
+import importlib.util
 
 # 스타일 정의
 st.markdown("""
@@ -18,11 +21,6 @@ st.markdown("""
 }
 </style>
 """, unsafe_allow_html=True)
-
-import streamlit as st
-import sys
-import os
-import importlib.util
 
 # ✅ 절대경로로 law_processor.py import
 base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "processing"))
